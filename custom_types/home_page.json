@@ -1,0 +1,26 @@
+{
+  "Main" : {
+    "logo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Logo"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "home_body_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item",
+        "label" : "Home Body Text"
+      }
+    }
+  }
+}
