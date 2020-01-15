@@ -1,6 +1,7 @@
 @import './shared/mixins';
 @import './shared/colors';
 
+@import './home';
 @import './header';
 @import './blog';
 
@@ -20,17 +21,16 @@ body {
 }
 
 .base-page {
-  padding: 150px 0 100px 0;
   color: black;
-  background-color: #ecedee;
+  background-color: $gainsboro;
   min-height: 100vh;
 
   .page-header {
-    .page-header-title {
-      font-weight: 700;
-      color: black;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 1.5rem;
   }
 }

@@ -1,30 +1,48 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import AppBarCollapse from '../nav/AppBarCollapse'
 
-const NextNavItem = ({ route, title }) => {
-  const router = useRouter()
-  if (!route) {
-    route = `/${title.toLowerCase()}`
-  }
-  const active = route === router.route ? 'active' : ''
+const ButtonAppBar = () => {
   return (
-    <div className="port-navbar-item">
-      <Link href={route}>
-        <a className={`nav-link port-navbar-link ${active}`}>{title}</a>
-      </Link>
-    </div>
+    <AppBar className="port-navbar port-nav-base" position="static">
+      <Toolbar>
+        <img className="square-logo" src="/images/square-logo-dark.png" />
+        <AppBarCollapse />
+      </Toolbar>
+    </AppBar>
   )
 }
 
-const Nav = ({className}) => {
-  return (
-    <div className="port-navbar port-nav-base">
-      <nav className={className}>
-        <NextNavItem route="/" title="Home" />
-        <NextNavItem title="Blog" />
-      </nav>
-    </div>
-  )
-}
+export default ButtonAppBar
 
-export default Nav
+// import { AppBar, Toolbar, Button, Grid, Typography } from '@material-ui/core'
+
+// const Nav = ({ className }) => {
+//   return (
+//     <AppBar className="port-navbar port-nav-base" position="static">
+//       <Toolbar>
+//         <Grid container direction="row" justify="space-between">
+//           <Grid container item xs={10}>
+//             <NextNavItem route="/" title="Home" />
+//             {/* <NextNavItem title="Blog" /> */}
+//           </Grid>
+//           <Grid container item xs={2}>
+//             <Button
+//               className="apply-button"
+//               size="large"
+//               edge="start"
+//               type="button"
+//               variant="contained"
+//               href="https://crosscountry.force.com/customer/s/applynow?nmlsId=1125281"
+//             >
+//               <Typography variant="h6">Apply Now!</Typography>
+//             </Button>
+//           </Grid>
+//         </Grid>
+//       </Toolbar>
+//     </AppBar>
+//   )
+// }
+
+// export default Nav

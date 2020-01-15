@@ -2,10 +2,8 @@
 .port-navbar.port-nav-base {
   width: 100%;
   z-index: 15;
-  padding: 40px;
+  padding: 1rem;
   background-color: $jet;
-  display: flex;
-  flex-direction: column;
 
   .port-navbar {
     &-brand {
@@ -27,14 +25,17 @@
       letter-spacing: 0.8px;
       font-size: 18px;
       text-transform: uppercase;
+      margin-left: 1rem;
 
       &.active {
-        color: #dba919;
+        border: 1px solid $gainsboro;
+        color: $gainsboro;
       }
 
       &:hover,
       &:focus {
-        color: #dba919;
+        background-color: $gainsboro;
+        color: $jet;
       }
     }
   }
@@ -43,6 +44,16 @@
 .port-navbar.port-nav-base.port-nav-default {
   padding: 30px;
   background-color: $secondary !important;
+}
+
+.square-logo {
+  max-width: 20vw;
+  max-height: 10vh;
+  object-fit: contain;
+}
+
+.apply-button {
+  font-weight: bold;
 }
 
 .clickable {
