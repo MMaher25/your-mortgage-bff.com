@@ -28,9 +28,9 @@ const menuItems = [
     title: 'Home',
     route: '/',
   },
-  {
-    title: 'Blog',
-  },
+  // {
+  //   title: 'Blog',
+  // },
 ]
 
 const NextNavButton = ({ route, title }) => {
