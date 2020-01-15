@@ -1,0 +1,26 @@
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin animate($type, $time) {
+  -webkit-animation: $type $time; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: $type $time; /* Firefox < 16 */
+  -ms-animation: $type $time; /* Internet Explorer */
+  -o-animation: $type $time; /* Opera < 12.1 */
+  animation: $type $time;
+}
+
+@mixin fill-mode($mode) {
+  -webkit-animation-fill-mode: $mode; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
+}
+
+@mixin delay($time) {
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+  animation-delay: $time;
+}

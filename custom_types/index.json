@@ -6,6 +6,12 @@
     "value": "home_page.json"
   },
   {
+    "id": "blog_listing_page",
+    "name": "Blog Listing Page",
+    "repeatable": false,
+    "value": "blog_listing_page.json"
+  },
+  {
     "id": "post",
     "name": "Post",
     "repeatable": true,

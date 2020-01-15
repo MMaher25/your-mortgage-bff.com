@@ -10,7 +10,10 @@
     "deploy": "now --prod"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "next": "9.1.7",
+    "node-sass": "^4.13.0",
     "prismic-javascript": "^2.1.5",
     "prismic-reactjs": "^1.1.2",
     "react": "16.12.0",
