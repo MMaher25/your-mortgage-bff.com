@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button, MenuItem } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import ButtonAppBarCollapse from './ButtonAppBarCollpase'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import AppBarDrawer from './AppBarDrawer'
 
 const styles = theme => ({
   root: {
@@ -30,6 +30,7 @@ const menuItems = [
   },
   // {
   //   title: 'Blog',
+  //   route: '/blog',
   // },
 ]
 
@@ -63,13 +64,7 @@ const NextNavMenuItem = ({ route, title }) => {
 
 const AppBarCollapse = props => (
   <div className={props.classes.root}>
-    <ButtonAppBarCollapse>
-      {menuItems.map(item => (
-        <NextNavMenuItem title={item.title} route={item.route} key={item.title}>
-          {item.title}
-        </NextNavMenuItem>
-      ))}
-    </ButtonAppBarCollapse>
+    <AppBarDrawer menuItems={menuItems} />
     <div className={props.classes.buttonBar} id="appbar-collapse">
       {menuItems.map(item => (
         <NextNavButton

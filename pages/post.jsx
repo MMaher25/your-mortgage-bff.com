@@ -4,7 +4,11 @@ import { client } from '../prismic-configuration'
 import Link from 'next/link'
 import BaseLayout from '../components/shared/BaseLayout'
 
-const Post = ({ post: { data: {title, date, post_body} } }) => (
+const Post = ({
+  post: {
+    data: { title, date, post_body },
+  },
+}) => (
   <BaseLayout>
     <div>
       {RichText.render(title)}
@@ -19,7 +23,7 @@ const Post = ({ post: { data: {title, date, post_body} } }) => (
   </BaseLayout>
 )
 
-Post.getInitialProps = async ({res, query: {uid}}) => {
+Post.getInitialProps = async ({ res, query: { uid } }) => {
   if (res) {
     res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate')
   }
