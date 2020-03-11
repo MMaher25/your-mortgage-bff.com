@@ -27,7 +27,7 @@ const Footer = props => (
       <ul className="copyright">
         <li>&copy; YourMortgageBFF.com {new Date().getFullYear()}</li>
         <li>
-          Built By: <a href="https://mjmaher.dev">MJMaher</a>
+          Website By: <a href="https://mjmaher.dev">MJMaher</a>
         </li>
       </ul>
     </div>
