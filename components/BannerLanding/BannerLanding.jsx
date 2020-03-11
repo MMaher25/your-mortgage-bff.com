@@ -1,3 +1,5 @@
+import Subtitle from './Subtitle'
+
 const BannerLanding = ({ title, subtitle }) => (
   <section id="banner" className="style2">
     <div className="inner">
@@ -5,10 +7,12 @@ const BannerLanding = ({ title, subtitle }) => (
         <h1>{title || 'Landing'}</h1>
       </header>
       <div className="content">
-        <p>
-          {subtitle || (`Lorem ipsum dolor sit amet nullam consequat
-          sed veroeros. tempus adipiscing nulla.`)}
-        </p>
+        <Subtitle
+          subtitle={
+            subtitle ||
+            `Lorem ipsum dolor sit amet nullam consequat sed veroeros. tempus adipiscing nulla.`
+          }
+        />
       </div>
     </div>
   </section>

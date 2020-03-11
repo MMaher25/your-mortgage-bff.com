@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Layout from '../components/Layout'
-import BannerLanding from '../components/BannerLanding'
+import BannerLanding from '../components/BannerLanding/BannerLanding'
 
 export default () => (
   <Layout>
