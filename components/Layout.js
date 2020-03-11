@@ -42,8 +42,8 @@ class Layout extends React.Component {
         }`}
       >
         <Head>
-          <title>Next.js Starter</title>
-          <meta name="description" content="Next.js Starter - Forty" />
+          <title>Your Mortgage BFF</title>
+          <meta name="description" content="Your Mortgage BFF" />
           <link href="/css/skel.css" rel="stylesheet" />
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
