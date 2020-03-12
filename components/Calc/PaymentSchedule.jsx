@@ -23,13 +23,15 @@ export default class PaymentSchedule extends React.Component {
     })
     return (
       <table id="payment-table">
-        <tr>
-          <td>#</td>
-          <td>Principal</td>
-          <td>Interest</td>
-          <td>Total Interest</td>
-          <td>Balance</td>
-        </tr>
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Principal</td>
+            <td>Interest</td>
+            <td>Total Interest</td>
+            <td>Balance</td>
+          </tr>
+        </thead>
         <tbody>{paymentRows}</tbody>
       </table>
     )

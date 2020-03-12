@@ -357,7 +357,7 @@ export default class MortgageCalculator extends React.Component {
               />
             </InputWrapper>
 
-            <div classname="row" id="calc-button-row">
+            <div className="row" id="calc-button-row">
               <button
                 className="6u 12u$(medium)"
                 type="button"
@@ -368,7 +368,9 @@ export default class MortgageCalculator extends React.Component {
               <button
                 className="6u 12u$(medium)"
                 type="button"
-                onClick={() => this.setState({ showPaymentSchedule: !showPaymentSchedule })}
+                onClick={() =>
+                  this.setState({ showPaymentSchedule: !showPaymentSchedule })
+                }
               >
                 {showPaymentSchedule ? 'Hide' : 'Show'} Payment Schedule
               </button>
