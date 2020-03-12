@@ -36,7 +36,7 @@ const Menu = props => (
       </ul>
       <ul className="actions vertical">
         <li>
-          <a href="#" className="button fit next">
+          <a href="#" className="button big next">
             Apply Now
           </a>
         </li>
