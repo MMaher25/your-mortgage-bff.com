@@ -5,13 +5,11 @@ export default class InputWrapper extends React.Component {
     const { label, children, subtext } = this.props
     var i = 0
     const inputs = React.Children.toArray(children).map(child => (
-      <div key={i++} className="butts">
-        {child}
-      </div>
+      <div key={i++}>{child}</div>
     ))
     return (
       <div className="row uniform calc-row">
-        <label>{label}</label>
+        <label className="3u">{label}</label>
         {inputs}
         {subtext}
       </div>

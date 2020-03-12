@@ -246,6 +246,7 @@ export default class MortgageCalculator extends React.Component {
       downPayment,
       showAdvanced,
       additionalPrincipal,
+      showPaymentSchedule,
     } = this.state
     const {
       loanAmount,
@@ -290,7 +291,7 @@ export default class MortgageCalculator extends React.Component {
           <form>
             <InputWrapper label="Home Price">
               <IconInput
-                icon="$"
+                icon="dollar"
                 type="text"
                 name="price"
                 value={Util.moneyValue(totalPrice, false, false)}
@@ -300,14 +301,14 @@ export default class MortgageCalculator extends React.Component {
 
             <InputWrapper label="Down Payment">
               <IconInput
-                icon="$"
+                icon="dollar"
                 type="text"
                 name="downPayment"
                 value={Util.moneyValue(downPayment, false, false)}
                 onChange={this.onDownPaymentChange}
               />
               <IconInput
-                icon="%"
+                icon="percent"
                 step="0.5"
                 type="number"
                 name="downPaymentPercent"
@@ -318,16 +319,17 @@ export default class MortgageCalculator extends React.Component {
 
             <InputWrapper label="Interest Rate">
               <IconInput
-                icon="%"
-                type="text"
+                icon="percent"
+                type="number"
                 name="interestRate"
                 defaultValue={Util.percentValue(interestRate, false)}
-                step="0.01"
+                step="0.1"
                 onInput={this.onInterestRateChange}
               />
             </InputWrapper>
 
             <InputWrapper label="Loan Term">
+              <span className={`icon fa fa-calendar`}></span>
               <select
                 className="custom-select"
                 name="termMonths"
@@ -347,7 +349,7 @@ export default class MortgageCalculator extends React.Component {
               subtext={<div>{payoffMessage}</div>}
             >
               <IconInput
-                icon="$"
+                icon="dollar"
                 type="text"
                 name="additionalPrincipal"
                 value={Util.moneyValue(additionalPrincipal, false, false)}
@@ -355,19 +357,27 @@ export default class MortgageCalculator extends React.Component {
               />
             </InputWrapper>
 
-            <div>
+            <div classname="row" id="calc-button-row">
               <button
+                className="6u 12u$(medium)"
                 type="button"
                 onClick={() => this.setState({ showAdvanced: !showAdvanced })}
               >
-                {showAdvanced ? 'Hide' : 'Show'} Advanced
+                {showAdvanced ? 'Hide' : 'Show'} Advanced Options
+              </button>
+              <button
+                className="6u 12u$(medium)"
+                type="button"
+                onClick={() => this.setState({ showPaymentSchedule: !showPaymentSchedule })}
+              >
+                {showPaymentSchedule ? 'Hide' : 'Show'} Payment Schedule
               </button>
             </div>
             {showAdvanced ? (
               <div className="inner">
                 <InputWrapper label="Tax Rate">
                   <IconInput
-                    icon="%"
+                    icon="percent"
                     type="number"
                     name="taxRate"
                     defaultValue={Util.percentValue(taxRate, false)}
@@ -378,7 +388,7 @@ export default class MortgageCalculator extends React.Component {
 
                 <InputWrapper label="Insurance Rate">
                   <IconInput
-                    icon="%"
+                    icon="percent"
                     type="number"
                     name="insuranceRate"
                     defaultValue={Util.percentValue(insuranceRate, false)}
@@ -389,7 +399,7 @@ export default class MortgageCalculator extends React.Component {
 
                 <InputWrapper label="Mortgage Insurance Rate">
                   <IconInput
-                    icon="%"
+                    icon="percent"
                     type="number"
                     name="mortgageInsuranceRate"
                     defaultValue={Util.percentValue(
@@ -443,7 +453,7 @@ export default class MortgageCalculator extends React.Component {
             </table>
           </div>
 
-          {this.props.showPaymentSchedule && (
+          {showPaymentSchedule && (
             <div>
               <h3>Payment Schedule</h3>
               <PaymentSchedule mortgage={this.state.mortgage} />

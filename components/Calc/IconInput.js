@@ -4,8 +4,8 @@ export default class IconInput extends React.Component {
   render() {
     const { icon } = this.props
     return (
-      <div>
-        <div>{icon}</div>
+      <div className="calc-input">
+        <span className={`icon fa fa-${icon}`}></span>
         <input {...this.props} />
       </div>
     )

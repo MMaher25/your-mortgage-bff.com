@@ -3,7 +3,29 @@
 }
 
 .calc-row {
-  display: inline-flex;
+  display: flex;
+  padding-bottom: 2em;
+
+  label {
+    align-self: flex-end;
+  }
+}
+
+.calc-input {
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-right: 0.5em;
+  }
+}
+
+.payment-table {
+  max-width: 90%;
+}
+
+#calc-button-row {
+  padding-bottom: 2em;
 }
 
 option {

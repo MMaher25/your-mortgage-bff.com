@@ -22,9 +22,9 @@ export default class PaymentSchedule extends React.Component {
       )
     })
     return (
-      <table>
+      <table id="payment-table">
         <tr>
-          <td>Payment #</td>
+          <td>#</td>
           <td>Principal</td>
           <td>Interest</td>
           <td>Total Interest</td>

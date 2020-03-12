@@ -13,6 +13,13 @@ const Menu = props => (
           </Link>
         </li>
         <li>
+          <Link href="/calc">
+            <a>
+              <span onClick={props.onToggleMenu}>Mortgage Calculator</span>
+            </a>
+          </Link>
+        </li>
+        <li>
           <Link href="/landing">
             <a>
               <span onClick={props.onToggleMenu}>Testimonials</span>

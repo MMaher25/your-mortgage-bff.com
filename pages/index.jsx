@@ -15,7 +15,7 @@ export default () => (
               <h3>Mortgage Calculator</h3>
               <p>How much house can I afford?</p>
             </header>
-            <Link href="/landing">
+            <Link href="/calc">
               <a className="link primary"></a>
             </Link>
           </article>
