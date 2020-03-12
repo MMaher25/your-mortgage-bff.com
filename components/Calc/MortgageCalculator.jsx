@@ -422,6 +422,12 @@ export default class MortgageCalculator extends React.Component {
               </div>
             ) : null}
           </form>
+          <div className="row">
+            <p>
+              <strong>Disclaimer:</strong> This calculator is for informational
+              purposes only.
+            </p>
+          </div>
           <div className="table-wrapper">
             <table>
               <tbody>
