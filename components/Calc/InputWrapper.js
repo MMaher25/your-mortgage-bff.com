@@ -10,7 +10,7 @@ export default class InputWrapper extends React.Component {
       </div>
     ))
     return (
-      <div className="row uniform">
+      <div className="row uniform calc-row">
         <label>{label}</label>
         {inputs}
         {subtext}

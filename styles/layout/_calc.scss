@@ -1,3 +1,11 @@
 #calc {
   background-color: _palette(bg-alt);
 }
+
+.calc-row {
+  display: inline-flex;
+}
+
+option {
+  color: black;
+}
