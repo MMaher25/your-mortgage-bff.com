@@ -462,10 +462,12 @@ export default class MortgageCalculator extends React.Component {
           </div>
 
           {showPaymentSchedule && (
-            <div>
+            <>
               <h3>Payment Schedule</h3>
-              <PaymentSchedule mortgage={this.state.mortgage} />
-            </div>
+              <div className="scheduleContainer">
+                <PaymentSchedule mortgage={this.state.mortgage} />
+              </div>
+            </>
           )}
         </div>
       </section>
