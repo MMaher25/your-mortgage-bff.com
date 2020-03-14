@@ -1,20 +1,18 @@
 var React = require('react')
-import Styles from './Switch.css'
 
 export default class Switch extends React.Component {
   render() {
-    const styles = Styles
     const { active } = this.props
-    var wrapperClass = styles.switchWrapper
+    var wrapperClass = 'switchWrapper'
     if (active) {
-      wrapperClass += ' ' + styles.switchWrapperActive
+      wrapperClass += ' switchWrapperActive'
     }
     return (
       <div
         className={wrapperClass}
         onClick={() => this.props.onChange(!active)}
       >
-        <div className={styles.switchBubble}></div>
+        <div className={'switchBubble'}></div>
       </div>
     )
   }
