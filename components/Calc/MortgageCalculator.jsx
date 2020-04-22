@@ -1,8 +1,8 @@
 import Switch from './Switch'
 import Util from './Util'
 
-var React = require('react')
-var mortgageJs = require('mortgage-js')
+import React from 'react'
+import mortgageJs from 'mortgage-js'
 import PaymentSchedule from './PaymentSchedule'
 import InputWrapper from './InputWrapper'
 import IconInput from './IconInput'

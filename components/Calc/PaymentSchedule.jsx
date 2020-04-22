@@ -1,6 +1,5 @@
 import Util from './Util'
-
-var React = require('react')
+import React from 'react'
 
 export default class PaymentSchedule extends React.Component {
   render() {

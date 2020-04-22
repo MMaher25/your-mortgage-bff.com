@@ -38,6 +38,7 @@ module.exports = {
     )
     return config
   },
+  plugins: ['@babel/plugin-syntax-dynamic-import'],
   // exportPathMap: function(defaultPathMap) {
   //   return {
   //     '/': { page: '/' },

@@ -1,4 +1,4 @@
-var React = require('react')
+import React from 'react'
 
 export default class Switch extends React.Component {
   render() {
