@@ -22,7 +22,7 @@
     "next": "^9.3.4",
     "node-sass": "^7.0.0",
     "postcss-easy-import": "^3.0.0",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^8.2.0",
     "prismic-javascript": "^2.7.0",
     "raw-loader": "^1.0.0",
     "react": "^16.13.1",
