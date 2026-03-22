@@ -7,39 +7,19 @@ const Menu = props => {
       <div className="inner">
         <ul className="links">
           <li>
-            <Link href="/">
-              <a>
-                <span onClick={props.onToggleMenu}>Home</span>
-              </a>
-            </Link>
+            <Link href="/" onClick={props.onToggleMenu}>Home</Link>
           </li>
           <li>
-            <Link href="/calc">
-              <a>
-                <span onClick={props.onToggleMenu}>Mortgage Calculator</span>
-              </a>
-            </Link>
+            <Link href="/calc" onClick={props.onToggleMenu}>Mortgage Calculator</Link>
           </li>
           <li>
-            <Link href="/landing">
-              <a>
-                <span onClick={props.onToggleMenu}>Testimonials</span>
-              </a>
-            </Link>
+            <Link href="/landing" onClick={props.onToggleMenu}>Testimonials</Link>
           </li>
           <li>
-            <Link href="/generic">
-              <a>
-                <span onClick={props.onToggleMenu}>A Blog</span>
-              </a>
-            </Link>
+            <Link href="/generic" onClick={props.onToggleMenu}>A Blog</Link>
           </li>
           <li>
-            <Link href="/elements">
-              <a>
-                <span onClick={props.onToggleMenu}>Blogs</span>
-              </a>
-            </Link>
+            <Link href="/elements" onClick={props.onToggleMenu}>Blogs</Link>
           </li>
         </ul>
         <ul className="actions vertical">

@@ -3,10 +3,8 @@ import Link from 'next/link'
 
 const Header = props => (
   <header id="header" className="alt">
-    <Link href="/">
-      <a className="logo">
-        <span>Your Mortgage</span> <strong>BFF</strong>
-      </a>
+    <Link href="/" className="logo">
+      <span>Your Mortgage</span> <strong>BFF</strong>
     </Link>
     <nav>
       <a className="menu-link" onClick={props.onToggleMenu}>
