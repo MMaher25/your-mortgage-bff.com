@@ -16,7 +16,7 @@
     "autoprefixer": "^10.4.23",
     "glob": "^10.4.5",
     "mortgage-js": "^0.1.2",
-    "next": "^15.5.18",
+    "next": "^16.3.0",
     "prismic-javascript": "^2.7.0",
     "prop-types": "^15.8.1",
     "prop-types": "^15.8.1",
